@@ -1,0 +1,52 @@
+---
+name: PrisionBP
+version: 1.0.0
+main: ByPaps/PrisionBP\Main
+api: 3.17.4
+load: POSTWORLD
+
+commands:
+  rankup:
+    aliases: ["ru"]
+    usage: "/rankup"
+    description: "Rankup to the next level"
+    permissions: rankup.command.default
+  rankupmax:
+    aliases: ["rum"]
+    usage: "/rankupmax"
+    description: "Rankup to the highest level possible"
+    permissions: rankup.command.default
+  admin:
+    aliases: ["sm"]
+    usage: "/setmina <player> <level>"
+    description: "Set a player's level"
+    permissions: rankup.command.admin
+  createminewarp:
+    aliases: ["createmw", "cmw"]
+    usage: "/createminewarp <name>"
+    description: "Create a new minewarp"
+    permissions: rankup.command.admin
+  deleteminewarp:
+    aliases: ["deletemw", "dmw"]
+    usage: "/deleteminewarp <name>"
+    description: "Delete a minewarp"
+    permissions: rankup.command.admin
+  mine:
+    usage: "/mina [name]"
+    description: "Teleport to a mine!"
+    permissions: rankup.command.default
+  mines:
+    usage: "/minas"
+    description: "Gives a list of mines"
+    permissions: rankup.command.default
+  setlevel:
+    usage: "/setlevel <player> <level>"
+    description: "Set a player's level"
+    permissions: rankup.command.admin
+
+permissions:
+  rankup.command.default:
+    default: true
+  rankup.command.admin:
+    default: op
+...
