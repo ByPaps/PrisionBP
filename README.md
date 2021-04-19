@@ -16,4 +16,4 @@ Commands restricted (rankup.command.admin)
 ```
 
 # Bugs/Issues
-Found a bug? Make an [issue]()!
+Found a bug? Make an [ByPaps](https://discord.gg/4F34P3M7AA)!
