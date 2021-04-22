@@ -5,4 +5,5 @@ branches:
 projects:
   PrisionBP:
     path: ""
+    icon: "prisionbp.png"
 ...
