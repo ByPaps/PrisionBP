@@ -31,15 +31,15 @@ commands:
     usage: "/deleteminewarp <name>"
     description: "Delete a minewarp"
     permissions: rankup.command.admin
-  mine:
+  mina:
     usage: "/mina [name]"
     description: "Teleport to a mine!"
     permissions: rankup.command.default
-  mines:
+  minas:
     usage: "/minas"
     description: "Gives a list of mines"
     permissions: rankup.command.default
-  setlevel:
+  setmina:
     usage: "/setlevel <player> <level>"
     description: "Set a player's level"
     permissions: rankup.command.admin
