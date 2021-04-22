@@ -156,7 +156,6 @@ class Main extends PluginBase implements Listener {
                         $y = $pos[1];
                         $z = $pos[2];
                         $levelName = $pos[3];
-                        $level;
                         $worldsAPI = $this->getServer()->getPluginManager()->getPlugin("MultiWorld");
                         if(is_null($worldsAPI) || $worldsAPI->isDisabled()) {
                             $level = $this->getServer()->getLevelByName($levelName);
