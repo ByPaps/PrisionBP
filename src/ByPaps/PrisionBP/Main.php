@@ -98,7 +98,7 @@ class Main extends PluginBase implements Listener {
         if($cmd->getName() === "createminewarp") {
             if(isset($args[0])) {
                 $name = strtolower(strval($args[0]));
-                $pos = $sender->getPosition($x, $y, $z, $level));
+                $pos = $sender->getPosition($x, $z));
                 $pos->x = $pos->getFloorX() + 0.5;
                 $pos->z = $pos->getFloorZ() + 0.5;
                 $this->createWarp($name, $pos, $sender->getLevel()->getFolderName());
