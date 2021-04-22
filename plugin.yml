@@ -1,7 +1,7 @@
 ---
 name: PrisionBP
 version: 1.0.0
-main: ByPaps/PrisionBP
+main: Main
 api: 3.17.4
 load: POSTWORLD
 
