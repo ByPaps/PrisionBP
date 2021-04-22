@@ -4,6 +4,7 @@ namespace ByPaps\PrisionBP;
 
 use onebone\economyapi\event\money\MoneyChangedEvent;
 use pocketmine\event\Listener;
+use pocketmine\event\getUsername;
 
 class MoneyChangeListener implements Listener {
 
