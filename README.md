@@ -10,7 +10,7 @@ Commands available to all (rankup.command.default)
 - minas
 - mina
 Commands restricted (rankup.command.admin)
-- setlevel
+- setmina
 - createminewarp
 - deleteminewarp
 ```
