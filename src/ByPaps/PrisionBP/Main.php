@@ -78,7 +78,7 @@ class Main extends PluginBase implements Listener {
             $this->handleMaxRankup($sender);
             $this->cmdReturn = true;
         }
-        if($cmd->getName() === "setlevel") {
+        if($cmd->getName() === "setmina") {
             if(isset($args[0]) && isset($args[1]) && $sender->hasPermission("admin.command")) {
                 $target = $this->getServer()->getPlayer($args[0]);
                 if($target instanceof Player) {
@@ -98,7 +98,7 @@ class Main extends PluginBase implements Listener {
         if($cmd->getName() === "createminewarp") {
             if(isset($args[0])) {
                 $name = strtolower(strval($args[0]));
-                $pos = $sender->getPosition($pos);
+                $pos = $sender->getPosition($x, $y, $z, $level));
                 $pos->x = $pos->getFloorX() + 0.5;
                 $pos->z = $pos->getFloorZ() + 0.5;
                 $this->createWarp($name, $pos, $sender->getLevel()->getFolderName());
