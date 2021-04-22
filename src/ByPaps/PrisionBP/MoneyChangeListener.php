@@ -14,7 +14,7 @@ class MoneyChangeListener implements Listener {
     }
 
     public function onMoneyChanged(MoneyChangedEvent $event) {
-        $this->plugin->DoBossbar($this-> $plugin->getServer()->getPlayer($event->getUsername()));
+        $this->plugin->DoBossbar($this->plugin->getServer()->getPlayer($event->getUsername()));
     }
 
 }
