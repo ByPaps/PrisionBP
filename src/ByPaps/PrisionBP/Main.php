@@ -45,7 +45,7 @@ class Main extends PluginBase implements Listener {
         $this->saveResource("updater.json");
         $this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML, []);
         $this->players = new Config($this->getDataFolder() . "players.yml", Config::YAML, []);
-        $this->mines = new Config($this->getDataFolder() . "minas.yml", Config::YAML, []);
+        $this->minas = new Config($this->getDataFolder() . "minas.yml", Config::YAML, []);
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $plugin = $this;
         $this->getScheduler()->scheduleDelayedTask(new ClosureTask(function () use ($plugin) : void {
