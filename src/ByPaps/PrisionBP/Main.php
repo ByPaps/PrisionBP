@@ -34,7 +34,7 @@ class Main extends PluginBase implements Listener {
     private $bars;
     private $economy;
     private $mineranks = [];
-    private $mines = [];
+    private $minas = [];
 
     public function onEnable() {
         $this->logger = $this->getServer()->getLogger();
@@ -112,8 +112,8 @@ class Main extends PluginBase implements Listener {
         if($cmd->getName() === "deleteminewarp") {
             if(isset($args[0])) {
                 $name = strtolower(strval($args[0]));
-                if(!is_null($this->mines->get($name))) {
-                    $this->mines->remove($name);
+                if(!is_null($this->minas->get($name))) {
+                    $this->minas->remove($name);
                     $sender->sendMessage(self::SUCCESS . "Succesfully deleted warp ".$args[0]);
                     $this->cmdReturn = true;
                 }
@@ -122,8 +122,8 @@ class Main extends PluginBase implements Listener {
 
         if($cmd->getName() === "minas") {
             $list = self::INFO . "Mine Warps:\n";
-            foreach(array_keys($this->mines->getAll()) as $mine) {
-                $list .= "- " . $mine . "\n";
+            foreach(array_keys($this->minas->getAll()) as $mina) {
+                $list .= "- " . $mina . "\n";
             }
             $sender->sendMessage($list);
             $this->cmdReturn = true;
@@ -132,7 +132,7 @@ class Main extends PluginBase implements Listener {
         if($cmd->getName() === "mina") {
             if(isset($args[0])) {
                 try{
-                    if(!is_null($this->mines->get( strtolower( strval( $args[0] ) ) ) ) ) {
+                    if(!is_null($this->minas->get( strtolower( strval( $args[0] ) ) ) ) ) {
                         $canGo = false;
                         if($this->config->get("rankup-style") === "numerical") {
                             if(floatval($args[0]) <= floatval($this->players->getNested($sender->getXuid() . ".minerank"))) {
@@ -147,7 +147,7 @@ class Main extends PluginBase implements Listener {
                             $sender->sendMessage(self::ERROR . "You cannot go to this mine!");
                             return true;
                         }
-                        $pos = $this->mines->get( strtolower( strval( $args[0] ) ) );
+                        $pos = $this->minas->get( strtolower( strval( $args[0] ) ) );
                         if(is_bool($pos)) {
                             $sender->sendMessage(self::ERROR."That mine does not exist!");
                             return true;
@@ -365,8 +365,8 @@ class Main extends PluginBase implements Listener {
     }
 
     private function createWarp(string $name, $position, $levelName) {
-        $this->mines->set($name, [$position->x, $position->y, $position->z, $levelName]);
-        $this->mines->save();
+        $this->minas->set($name, [$position->x, $position->y, $position->z, $levelName]);
+        $this->minas->save();
     }
 
     public function initEconomy() {
