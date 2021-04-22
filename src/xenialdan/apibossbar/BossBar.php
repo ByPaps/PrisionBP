@@ -1,7 +1,7 @@
 <?php
 
 
-namespace bypaps\apibossbar;
+namespace xenialdan\apibossbar;
 
 use pocketmine\entity\Attribute;
 use pocketmine\entity\AttributeMap;
