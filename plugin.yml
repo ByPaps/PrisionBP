@@ -1,5 +1,5 @@
 ---
-name: PrisionBP ByPapsPlugins
+name: PrisionBP_ByPapsPlugins
 version: 1.0.0
 main: ByPaps\PrisionBP\Main
 api: 3.17.4
